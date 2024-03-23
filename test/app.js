@@ -3,7 +3,7 @@ import { Component } from './node_modules/apallax.js/component.js';
 
 class App extends Component {
     render() {
-        return `<h1 style="text-align: center;">Hello</h1>`;
+        return /*html */`<h1 style="text-align: center;">Hello</h1>`;
     }
 }
 

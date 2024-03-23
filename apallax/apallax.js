@@ -12,13 +12,16 @@ import { Break } from "./presets/Break.js";
 import { StyleSheet } from "./presets/StyleSheet.js";
 import { Icon } from "./presets/Icon.js";
 import { LinkElement } from "./presets/LinkElement.js";
+import { Css } from "./presets/Css.js";
+import { JavaScript } from './presets/JavaScript.js';
 
 const Apallax = {
     components: {
         Img, Headline, DownloadLink,
         ScriptImport, Div, Subtitle,
         HeadlineWithLogo, Link, Break,
-        StyleSheet, Icon, LinkElement
+        StyleSheet, Icon, LinkElement,
+        Css, JavaScript
     },
 
     addComponent: function (name, component) {
