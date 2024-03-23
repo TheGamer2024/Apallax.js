@@ -1,6 +1,6 @@
 {
   "name": "apallax.js",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A simple JavaSript framework for websites.",
   "main": "apallax.js",
   "scripts": {
@@ -15,5 +15,5 @@
   "bugs": {
     "url": "https://github.com/TheGamer2024/Apallax.js/issues"
   },
-  "homepage": "https://github.com/TheGamer2024/Apallax.js/apallax#readme"
+  "homepage": "https://github.com/TheGamer2024/Apallax.js/tree/main/apallax#readme"
 }
