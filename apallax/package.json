@@ -1,7 +1,7 @@
 {
   "name": "apallax.js",
-  "version": "1.0.2",
-  "description": "A simple JavaSript framework for websites.",
+  "version": "1.0.3",
+  "description": "A simple JavaSript framework for websites a bit similar to React.",
   "main": "apallax.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
