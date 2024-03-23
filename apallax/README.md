@@ -22,7 +22,7 @@ To create a website with Apallax.js you need to do the following steps: <br>
 9. Create a folder called `components` <br>
 10. To add your components in this folder import Apallax Components (`import { Component } from '../node_modules/apallax.js/component.js';`) <br>
     and create the component with <br>
-    `class CLASS_NAME extends Component {` <br>
+    `export class CLASS_NAME extends Component {` <br>
     `   render() {` <br>
     `       return HTML_CODE` <br>
     `   }` <br>
