@@ -1,6 +1,6 @@
 {
   "name": "apallax.js",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A simple JavaSript framework for websites a bit similar to React. With inclusive presets",
   "main": "apallax.js",
   "scripts": {
@@ -15,5 +15,5 @@
   "bugs": {
     "url": "https://github.com/TheGamer2024/Apallax.js/issues"
   },
-  "homepage": "https://github.com/TheGamer2024/Apallax.js/tree/main/apallax#readme"
+  "homepage": "https://www.apallax.hannesscript.dev"
 }

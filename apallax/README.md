@@ -9,7 +9,9 @@ Apallax.js is very easy to use.
 
 # Documentation
 
-To create a website with Apallax.js you need to do the following steps: <br>
+You can find the documentation [here](https://apallax.hannesscript.dev#tutorial)
+
+<!-- To create a website with Apallax.js you need to do the following steps: <br>
 
 1. Install Apallax.js with `npm i apallax.js` <br>
 2. Create a file named `index.html` in the root directory of your site <br>
@@ -30,4 +32,4 @@ To create a website with Apallax.js you need to do the following steps: <br>
 11. Register your components with `Apallax.addComponent('THE COMPONENT NAME FOR APALLAX', The Component);` <br>
 12. Create the Main/App component <br>
 13. Add the Main/App component with `Apallax.addComponent('Main/App', Main/App);` <br>
-14. Render site with `Apallax.render('Main/App', null, null, 'apallax-root');`
+14. Render site with `Apallax.render('Main/App', null, null, 'apallax-root');` -->
