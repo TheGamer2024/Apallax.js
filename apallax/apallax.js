@@ -14,43 +14,82 @@ import { Icon } from "./presets/Icon.js";
 import { LinkElement } from "./presets/LinkElement.js";
 import { Css } from "./presets/Css.js";
 import { JavaScript } from './presets/JavaScript.js';
+import { Bootstrap } from "./presets/Bootstrap.js";
+import { Mdl } from './presets/Mdl.js';
 
-const Apallax = {
-    components: {
-        Img, Headline, DownloadLink,
-        ScriptImport, Div, Subtitle,
-        HeadlineWithLogo, Link, Break,
-        StyleSheet, Icon, LinkElement,
-        Css, JavaScript
-    },
+class Apallax {
+    constructor() {
+        this.components = {
+            Img, Headline, DownloadLink,
+            ScriptImport, Div, Subtitle,
+            HeadlineWithLogo, Link, Break,
+            StyleSheet, Icon, LinkElement,
+            Css, JavaScript, Bootstrap,
+            Mdl
+        };
 
-    addComponent: function (name, component) {
+        this.customTags = new Set();
+    }
+
+    addComponent(name, component) {
         this.components[name] = component;
-    },
+        this.customTags.add(name);
+        this.defineCustomElements();
+    }
 
-    component: function (name, props, children) {
+    // component: function (name, props, children) {
+    //     const component = this.components[name];
+    //     if (!component) throw new Error(`Component ${name} not found...`);
+
+    //     const instance = new component(props, children);
+    //     return instance.render();
+    // }
+
+    formatProps(props) {
+        return Object.entries(props || {})
+            .map(([key, value]) => `${key}="${value}"`)
+            .join(' ');
+    }
+
+    component(name, props) {
         const component = this.components[name];
-        if (!component) throw new Error(`Component ${name} not found...`);
+        if (!component) throw new Error(`Component ${name} not found`);
 
-        const instance = new component(props, children);
-        return instance.render();
-    },
+        const htmlTag = `<${name} ${this.formatProps(props)}></${name}>`;
+        return htmlTag;
+    }
 
-    printComponents: function () {
+    defineCustomElements() {
+        this.customTags.forEach(tagName => {
+            customElements.define(tagName, class extends HTMLElement {
+                constructor() {
+                    super();
+                    const props = {};
+                    for (const { name, value } of this.attributes) {
+                        props[name] = value;
+                    }
+                    const componentHTML = this.component(tagName, props);
+                    this.innerHTML = componentHTML;
+                }
+            });
+        });
+    }
+
+    printComponents() {
         console.log(this.components);
-    },
+    }
 
-    mountComponent: function (component, container) {
+    mountComponent(component, container) {
         container.innerHTML = component;
-    },
+    }
 
-    render: function (componentName, props, children, containerId) {
+    render(componentName, props, children, containerId) {
         const component = this.component(componentName, props, children);
         const container = document.getElementById(containerId);
         if (!container) throw new Error(`Can't find container with ID ${containerId}...`);
 
         this.mountComponent(component, container);
     }
-};
+}
 
 export { Apallax };
