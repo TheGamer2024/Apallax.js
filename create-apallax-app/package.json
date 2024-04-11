@@ -1,0 +1,16 @@
+{
+  "name": "create-apallax-app",
+  "version": "1.0.6",
+  "description": "A simple script to create an Apallax.js app",
+  "main": "main.js",
+  "bin": {
+    "create-apallax-app": "main.js"
+  },
+  "keywords": [
+    "create-apallax-app",
+    "apallax.js",
+    "web development"
+  ],
+  "author": "HannesScript",
+  "license": "ISC"
+}

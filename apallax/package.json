@@ -1,6 +1,6 @@
 {
   "name": "apallax.js",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A simple JavaSript framework for websites a bit similar to React. With inclusive presets",
   "main": "apallax.js",
   "scripts": {
