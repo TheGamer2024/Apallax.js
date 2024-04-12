@@ -1,8 +1,6 @@
 import { Apallax } from '../../apallax.js';
 import { Component } from '../../component.js';
 
-const apallax = new Apallax;
-
 class Test extends Component {
     render() {
         return `
@@ -19,5 +17,5 @@ class App extends Component {
     }
 }
 
-apallax.addComponent('app-home', App);
-apallax.render('app-home', null, null, 'apallax-root');
+Apallax.addComponent('App', App);
+Apallax.render('App', null, null, 'apallax-root');
